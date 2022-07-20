@@ -16,9 +16,10 @@ export class CityService {
   async createCity(
     createCityDto: CreateCityDto,
   ): Promise<{ message: string; creation1: City }> {
-    const { city } = createCityDto;
+    const { city, state } = createCityDto;
     const creation1 = this.cityRepository.create({
       city,
+      state: state as any,
     });
     await this.cityRepository.save(creation1);
     return { message: 'city created successfully', creation1 };

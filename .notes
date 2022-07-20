@@ -1,13 +1,13 @@
 Task 7:
     - Rename the repository to FindMyCity OK
     - Delete the calculate module and create a "locations" module that servers X APIs. OK
-    - /countries should return a list of countries OK
-    - /countries/10 should return the country with id 10
-    - /states should return a list of states OK
+    - /countries should return a list of countries OK                                  ok
+    - /countries/10 should return the country with id 10                               ok
+    - /states should return a list of states                                           OK
     - /states?countryId=5 should return the states that belong to country 5
-    - /states/10 should return the state with id 10
-    - /cities should return the list of cities OK
-    - /cities/10 should return the city with id 10
-    - /cities?stateId=5 should return the cities that belong to state 5
+    - /states/10 should return the state with id 10                                    ok
+    - /cities should return the list of cities                                         OK
+    - /cities/10 should return the city with id 10                                     ok
+    - /cities?stateId=5 should return the cities that belong to state 5 
 
     - In database, all cities, states, and countries should have an id, and a name`

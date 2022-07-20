@@ -7,5 +7,5 @@ export class Country {
   @Column()
   country: string;
   @OneToMany(() => State, (state) => state.country)
-  state: State;
+  state: State[];
 }

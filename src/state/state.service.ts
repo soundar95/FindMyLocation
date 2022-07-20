@@ -16,13 +16,15 @@ export class StateService {
   async createState(
     createStateDto: CreateStateDto,
   ): Promise<{ message: string; creation1: State }> {
-    const { state } = createStateDto;
+    const { state, country } = createStateDto;
     const creation1 = this.stateRepository.create({
       state,
+      country: country as any,
     });
     await this.stateRepository.save(creation1);
     return { message: 'state created successfully', creation1 };
   }
+
   async getStateById(id: string): Promise<State | string> {
     const found = await this.stateRepository.findOne({
       where: { id },
