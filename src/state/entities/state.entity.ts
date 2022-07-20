@@ -12,7 +12,7 @@ import {
 export class State {
   @PrimaryGeneratedColumn('uuid')
   id: string;
-  @Column()
+  @Column({ nullable: false })
   state: string;
   @ManyToOne(() => Country, (country) => country.state)
   @JoinColumn({ name: 'country-id', referencedColumnName: 'id' })

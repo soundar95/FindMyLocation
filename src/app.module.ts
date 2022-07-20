@@ -10,6 +10,7 @@ import { City } from './city/entities/city.entity';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
+      name: 'default',
       type: 'postgres',
       host: 'localhost',
       port: 5432,
